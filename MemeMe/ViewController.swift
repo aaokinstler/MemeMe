@@ -52,7 +52,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         picker.dismiss(animated: true, completion: nil)
         if let image = info[.originalImage] as? UIImage {
             imagePickerView.image = image
-//            imageView.image = image
             shareButton.isEnabled = true
         }
     }
