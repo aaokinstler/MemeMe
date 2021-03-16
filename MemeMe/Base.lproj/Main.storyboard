@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="landscape" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,19 +13,19 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--MemeEditorViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MemeEditorViewController" id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hmz-r8-022">
-                                <rect key="frame" x="0.0" y="44" width="844" height="249"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="629"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IcX-Ew-J1H">
-                                        <rect key="frame" x="0.0" y="0.0" width="844" height="249"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="629"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -43,7 +43,7 @@
                                 </connections>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DCr-O6-2ha" userLabel="TopToolbar">
-                                <rect key="frame" x="0.0" y="0.0" width="844" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="9j1-mH-YER"/>
                                 </constraints>
@@ -62,28 +62,28 @@
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="775-9X-upu" userLabel="BottomToolbar">
-                                <rect key="frame" x="0.0" y="293" width="844" height="44"/>
+                                <rect key="frame" x="0.0" y="717" width="390" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="uli-W2-QNw"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="JG2-8H-g3l"/>
-                                    <barButtonItem title="Album" id="Qij-KR-ul1">
+                                    <barButtonItem tag="1" title="Album" id="Qij-KR-ul1">
                                         <connections>
                                             <action selector="pickImage:" destination="BYZ-38-t0r" id="L3o-1n-gcU"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="kpb-Br-3Yg"/>
-                                    <barButtonItem title="Camera" image="camera" catalog="system" id="QyX-0E-gh2">
+                                    <barButtonItem tag="2" title="Camera" image="camera" catalog="system" id="QyX-0E-gh2">
                                         <connections>
-                                            <action selector="pickCameraImage:" destination="BYZ-38-t0r" id="mkK-vR-YiL"/>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" id="h6l-mH-pO7"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UOU-dW-xqY"/>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="2Z8-nv-qUm">
-                                <rect key="frame" x="84" y="56" width="676" height="32.333333333333343"/>
+                                <rect key="frame" x="40" y="100" width="310" height="32.333333333333343"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -92,7 +92,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWj-h9-Fl2">
-                                <rect key="frame" x="84" y="248.66666666666666" width="676" height="32.333333333333343"/>
+                                <rect key="frame" x="40" y="672.66666666666663" width="310" height="32.333333333333371"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
