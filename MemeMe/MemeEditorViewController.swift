@@ -130,6 +130,12 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             _, completed, _, _ in
             if completed {
                 let meme = Meme(topText: self.topTextField.text, bottomText: self.bottomTextField.text, originalImage: self.imagePickerView.image,memedImage: memedImage)
+                let object = UIApplication.shared.delegate
+                let appDelegate = object as! AppDelegate
+                appDelegate.memes.append(meme)
+                // send post tu update views
+                NotificationCenter.default.post(name: Notification.Name("AddedImage"), object: nil)
+                self.dismiss(animated: true, completion: nil)
             }
         }
         present(shareController, animated: true, completion: nil)
