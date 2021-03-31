@@ -133,7 +133,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
                 let object = UIApplication.shared.delegate
                 let appDelegate = object as! AppDelegate
                 appDelegate.memes.append(meme)
-                // send post tu update views
+                // send post to update views
                 NotificationCenter.default.post(name: Notification.Name("AddedImage"), object: nil)
                 self.dismiss(animated: true, completion: nil)
             }
@@ -142,9 +142,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func CancellChanges(_ sender: Any) {
-        imagePickerView.image = nil
-        setTextToTextFields()
-        shareButton.isEnabled = false
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
